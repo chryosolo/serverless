@@ -1,5 +1,5 @@
+var util = require('util');
 module.exports = function(ctx, cb) {
-  console.log('Webhook invoked');
-  cb(null, { hi: ctx.data.name || 'Anonymous',
-  "foo": ctx.data.carl });
+    console.log(util.inspect(ctx.body, { depth: null }));
+    cb();
 };
